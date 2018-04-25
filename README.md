@@ -2,18 +2,20 @@
 # URL-Shortner-PHP-Script
 Single Application Program for generating short URL
 
-Prerequisites 
+Prerequisites
+
   a) Optionally you can run this from your current domain or find a short domain
   b) Apache
   c) PHP
   d) MySQL
 
 Installation
-2. Download a .zip file of the URL shortener PHP script files
-3. Upload the contents of the .zip file to your web server
-4. Update the database info in config.php
-5. Run the SQL included in shorturls.sql. Many people use phpMyAdmin for this, if you can’t do it yourself contact your host.
-6. Rename rename.htaccess to .htaccess
+
+- Download a .zip file of the URL shortener PHP script files
+- Upload the contents of the .zip file to your web server
+- Update the database info in config.php
+- Run the SQL included in shorturls.sql. Many people use phpMyAdmin for this, if you can’t do it yourself contact your host.
+- Rename rename.htaccess to .htaccess
 
 
 Using your personal URL shortener service
