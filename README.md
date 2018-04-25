@@ -13,9 +13,10 @@ Installation
 
 - Download a .zip file of the URL shortener PHP script files
 - Upload the contents of the .zip file to your web server
-- Update the database info in config.php
+- Update the appropriate "Database Name", "Uername", "Password", "Database Host" in config.php
 - Run the SQL included in shorturls.sql. Many people use phpMyAdmin for this, if you can’t do it yourself contact your host.
 - Rename rename.htaccess to .htaccess
+ 
 
 
 Using your personal URL shortener service
