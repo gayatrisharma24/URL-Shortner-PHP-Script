@@ -24,7 +24,7 @@ class Shortener
      */
 	public function __construct()
 	{
-		$this->db = new mysqli('localhost', 'root', 'satech@1234', 'shorturls');
+		$this->db = new mysqli('DB_Host', 'Username', 'Password', 'DB_Name');
 	}
 
     /**
