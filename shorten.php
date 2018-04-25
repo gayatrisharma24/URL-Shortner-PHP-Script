@@ -1,19 +1,38 @@
 <?php
-session_start();
-require_once 'classes/Shortener.php';
+	/**
+	 * Shorten
+	 *
+	 * @author Gayatri Sharma
+	 *
+	 * Start the Session
+	 */
+	session_start();
 
-$s = new Shortener;
+	//includes Shortner file for DB Connection
+	require_once 'classes/Shortener.php';
 
-if(isset($_POST['url'])){
-	$url = $_POST['url'];
+	/** 
+     * @param Shortener $s
+     */
+	$s = new Shortener;
 
-	if($code = $s->makeCode($url)){
-		$_SESSION['feedback'] = "Generated! Your short URL is: <a href=\"http://localhost/php123/{$code}\">http://localhost/php123/{$code}</a>";
-	}else{
-		$_SESSION['feedback'] = "There was a problem. Invalid URL, perhaps?";
-	}
+	// Check for URL entered
+	if (isset($_POST['url'])) 
+	{
+    	$url = $_POST['url'];
+    
+    // Short code appended at the end of the current URL
+    if ($code = $s->makeCode($url)) 
+    {
+        $_SESSION['user'] = "Generated! Your short URL is: <a href=\"http://localhost/php123/{$code}\">http://localhost/php123/{$code}</a>";
+    } 
+    else 
+    {
+        $_SESSION['user'] = "There was a problem.";
+    }
 }
 
-header('Location: index.php');
-
-?>
+	 /** 
+     * Redirection to Index page
+     */
+    header('Location: index.php');
